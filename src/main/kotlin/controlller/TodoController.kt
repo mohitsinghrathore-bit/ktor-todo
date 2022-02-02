@@ -56,18 +56,18 @@ class TodoController( var repos: TodoRepository) {
             call.respond(HttpStatusCode.OK)
         }
     }
-//    suspend fun remtodo(call: ApplicationCall){
-//        val id = call.parameters["id"]?.toIntOrNull()
-//        if(id == null){
-//            call.respond(HttpStatusCode.BadRequest, "please enter the number")
-//            return@delete
-//        }
-//        val res=repos.deletetodo(id)
-//        if(res){
-//            call.respond(HttpStatusCode.OK)
-//        }else{
-//            call.respond(HttpStatusCode.NotFound)
-//        }
-//    }
+    suspend fun remtodo(call: ApplicationCall){
+        val id = call.parameters["id"]?.toIntOrNull()
+        if(id == null){
+            call.respond(HttpStatusCode.BadRequest, "please enter the number")
+            return
+        }
+        val res=repos.deletetodo(id)
+        if(res){
+            call.respond(HttpStatusCode.OK)
+        }else{
+            call.respond(HttpStatusCode.NotFound)
+        }
+    }
 
     }

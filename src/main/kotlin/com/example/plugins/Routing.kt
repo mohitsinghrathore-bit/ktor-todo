@@ -37,15 +37,15 @@ fun Application.configureRouting() {
             todocontroller.updtodo(call)
 
         }
-//        post("/Todo"){
-//            todocontroller.addtodo(call)
-//        }
-//        put("/Todo/id"){
-//            todocontroller.updtodo(call)
-//        }
-//        delete("Todo/id"){
-//            todocontroller.remtodo(call)
-//        }
+        post("/Todo"){
+            todocontroller.addtodo(call)
+        }
+        put("/Todo/id"){
+            todocontroller.updtodo(call)
+        }
+        delete("Todo/id"){
+            todocontroller.remtodo(call)
+        }
 //        //getalltodo()
 //        Todobyid()
 //        addTodo()
